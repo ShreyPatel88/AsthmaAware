@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "react/prop-types": "off",
+    "react/no-unknown-property": ["error", { "ignore": ["css"] }]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "overrides": [
+    {
+      "files": ["**/node_modules/**"],
+      "rules": {
+        "react/default-props-match-prop-types": "off"
+      }
+    }
+  ]
+}
